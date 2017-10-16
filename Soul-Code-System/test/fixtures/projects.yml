@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  sale_date: 2017-10-16
+  deadline: 2017-10-16
+  company_name: MyString
+  phone: MyString
+  status: 1
+  client_id: 
+  cliente_note: MyText
+
+two:
+  name: MyString
+  description: MyText
+  sale_date: 2017-10-16
+  deadline: 2017-10-16
+  company_name: MyString
+  phone: MyString
+  status: 1
+  client_id: 
+  cliente_note: MyText
