@@ -2,12 +2,13 @@ RailsAdmin.config do |config|
 
 
   #Configuração de nomes
-  config.main_app_name = ["Soul Code Jr", "2.0"]
+  config.main_app_name = ["Soul Code Jr", "Versão 2.0"]
+config.navigation_static_label = "Lins Úteis"
 
   config.navigation_static_links = {
   'Soul Code Jr' => 'http://soulcodejr.com',
   'Facebook' => 'https://www.facebook.com/Soulcodejr/',
-  'Instagram' => 'https://www.instagram.com/soulcodejr/'
+  'Instagram' => 'https://www.instagram.com/soulcodejr/',
 }
  
 config.navigation_static_label = "Lins Úteis"
