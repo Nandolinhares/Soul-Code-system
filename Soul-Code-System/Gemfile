@@ -26,7 +26,7 @@ gem 'carrierwave'
 #Ajustar tamanho das fotos do carrierwave
 gem 'mini_magick', '~> 4.3'
 #Personalizar rails admin
-gem 'rails_admin_rollincode', '~> 1.0'
+gem 'rails_admin_rollincode', :git => 'https://github.com/Nandolinhares/rollincodeAdminpersonalizada.git'
 
 
 # Use jquery as the JavaScript library

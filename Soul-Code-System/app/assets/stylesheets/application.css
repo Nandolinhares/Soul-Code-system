@@ -13,4 +13,14 @@
  *= require_tree .
  *= require_self
  */
-
+.imagem_login{
+	margin-top: 60px;
+	width: 240px;
+}
+/* Login */
+.login_position{
+	margin-top: 15%; 
+}
+.h4_login{
+	text-align: center;
+}

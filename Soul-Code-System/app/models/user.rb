@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 	enum kind: [:collaborator,:manager]
 	enum status: [:active,:inactive]
+
+	mount_uploader :photo, PhotoUploader
 end

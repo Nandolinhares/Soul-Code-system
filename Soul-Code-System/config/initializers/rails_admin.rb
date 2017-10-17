@@ -3,7 +3,6 @@ RailsAdmin.config do |config|
 
   #Configuração de nomes
   config.main_app_name = ["Soul Code Jr", "Versão 2.0"]
-config.navigation_static_label = "Lins Úteis"
 
   config.navigation_static_links = {
   'Soul Code Jr' => 'http://soulcodejr.com',
@@ -11,7 +10,7 @@ config.navigation_static_label = "Lins Úteis"
   'Instagram' => 'https://www.instagram.com/soulcodejr/',
 }
  
-config.navigation_static_label = "Lins Úteis"
+config.navigation_static_label = "Nossos Perfis"
 
 
   ### Popular gems integration
@@ -63,6 +62,7 @@ end
 
   config.model User do
     create do
+      field :photo
       field :name
       field :kind
       field :status
@@ -72,6 +72,7 @@ end
       field :password_confirmation
     end  
     edit do
+      field :photo
       field :name
       field :kind
       field :status
@@ -79,6 +80,19 @@ end
       field :email
       field :password
       field :password_confirmation
+    end  
+    show do
+      field :photo, :carrierwave do
+          pretty_value do
+            bindings[:view].tag(:img, { :src => bindings[:object].photo.medium })
+          end
+        end 
+      field :photo
+      field :name
+      field :kind
+      field :status
+      field :notes
+      field :email
     end  
     list do
       field :name

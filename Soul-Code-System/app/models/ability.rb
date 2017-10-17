@@ -13,7 +13,7 @@ class Ability
         can :read, Member
         can :read, Project
         can :read, Address#, user_id: user.id
-        can :manage, User, id: user.id
+        can :read, User, id: user.id
       elsif user.kind == 'manager'
         can :manage, :all
       end

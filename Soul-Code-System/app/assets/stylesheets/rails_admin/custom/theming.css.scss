@@ -1,8 +1,9 @@
- .navbar-inner {
+a.navbar-brand{
+	background: #35648c !important;
+}
+.navbar-inner {
   background-image: image_url('logo.png');
-  background-repeat: no-repeat;
 }
-
-.navbar-brand {
-  background-image: asset-data-url('logo.png');
-}
+.brand {
+  display: none !important; 
+}  

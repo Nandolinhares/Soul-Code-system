@@ -1,0 +1,38 @@
+<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+
+     <%= image_tag "logo.png", class: "imagem_login" %>
+
+
+    <div class="login_position">
+
+      <h4 class="h4_login">ENTRAR</h4>
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-group">
+          <%= f.label :email, class: "label_login" %><br />
+          <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, "Senha", class: "label_login" %><br />
+          <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Senha" %>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="form-group">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me, "Manter logado", class: "label_login" %>
+            <!--<%= link_to "Esqueceu sua senha",new_password_path(resource_name), class: "esqueceu_senha" %> -->
+            <b class="esqueceu_senha">Versão 2.0</b> 
+          </div>
+          
+
+        <div>
+          <%= f.submit "ACESSAR", class: "btn btn-primary botao_login" %>
+        </div>  
+        <% end -%>
+  
+      <% end %>
+
+           <%= image_tag "front_end.png", class: "imagem_front" %>
+
