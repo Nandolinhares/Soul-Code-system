@@ -25,6 +25,8 @@ gem 'cancancan', '~> 1.15.0'
 gem 'carrierwave'
 #Ajustar tamanho das fotos do carrierwave
 gem 'mini_magick', '~> 4.3'
+#Personalizar rails admin
+gem 'rails_admin_rollincode', '~> 1.0'
 
 
 # Use jquery as the JavaScript library

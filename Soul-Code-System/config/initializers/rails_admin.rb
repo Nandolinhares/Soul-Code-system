@@ -1,5 +1,18 @@
 RailsAdmin.config do |config|
 
+
+  #Configuração de nomes
+  config.main_app_name = ["Soul Code Jr", "2.0"]
+
+  config.navigation_static_links = {
+  'Soul Code Jr' => 'http://soulcodejr.com',
+  'Facebook' => 'https://www.facebook.com/Soulcodejr/',
+  'Instagram' => 'https://www.instagram.com/soulcodejr/'
+}
+ 
+config.navigation_static_label = "Lins Úteis"
+
+
   ### Popular gems integration
 
   ## == Devise ==
@@ -23,8 +36,58 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
 
+#Configurando os ícones do menu
+config.model Client do
+    navigation_icon 'fa fa-address-card-o'
+end
+
+config.model Department do
+  navigation_icon 'fa fa-address-book-o'
+end  
+
+config.model Member do
+  navigation_icon 'fa fa-user-circle-o'
+end  
+
+config.model Project do
+  navigation_icon 'fa fa-briefcase'
+end
+
+config.model User do
+  navigation_icon 'fa fa-user'
+end  
+
 
   #Configurações que apareceram no formulário
+
+  config.model User do
+    create do
+      field :name
+      field :kind
+      field :status
+      field :notes
+      field :email
+      field :password
+      field :password_confirmation
+    end  
+    edit do
+      field :name
+      field :kind
+      field :status
+      field :notes
+      field :email
+      field :password
+      field :password_confirmation
+    end  
+    list do
+      field :name
+      field :kind
+      field :email
+      field :status
+      field :created_at
+    end  
+  end  
+
   config.model Client do
     create do
       field :photo
@@ -170,7 +233,7 @@ RailsAdmin.config do |config|
       field :phone
       field :status
       field :client
-      field :client_note
+      field :cliente_note
       field :members
     end  
     list do
