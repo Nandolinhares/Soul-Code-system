@@ -21,6 +21,10 @@ gem 'rails_admin'
 gem 'devise'
 #Autorização
 gem 'cancancan', '~> 1.15.0'
+#Upload de fotos
+gem 'carrierwave'
+#Ajustar tamanho das fotos do carrierwave
+gem 'mini_magick', '~> 4.3'
 
 
 # Use jquery as the JavaScript library

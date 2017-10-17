@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.img_member{
+	width: 22% !important;
+}

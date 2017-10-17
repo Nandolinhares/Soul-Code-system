@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171016223659) do
+ActiveRecord::Schema.define(version: 20171017141346) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "country"
@@ -49,8 +49,12 @@ ActiveRecord::Schema.define(version: 20171016223659) do
     t.integer  "status"
     t.date     "birthday"
     t.text     "notes"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "photo"
+    t.string   "document_one"
+    t.string   "document_two"
+    t.string   "document_three"
   end
 
   create_table "departments", force: :cascade do |t|
@@ -74,6 +78,9 @@ ActiveRecord::Schema.define(version: 20171016223659) do
     t.string   "position"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "photo"
+    t.string   "document_one"
+    t.string   "document_two"
   end
 
   add_index "members", ["department_id"], name: "index_members_on_department_id"

@@ -26,6 +26,63 @@ RailsAdmin.config do |config|
 
   #Configurações que apareceram no formulário
   config.model Client do
+    create do
+      field :photo
+      field :name
+      field :company_name
+      field :rg
+      field :cpf
+      field :phone
+      field :email
+      field :status
+      field :birthday
+      field :notes
+      field :addresses
+      field :projects
+      field :document_one
+      field :document_two
+      field :document_three
+    end  
+    edit do
+      field :photo
+      field :name
+      field :company_name
+      field :rg
+      field :cpf
+      field :phone
+      field :email
+      field :status
+      field :birthday
+      field :notes
+      field :addresses
+      field :projects
+      field :document_one
+      field :document_two
+      field :document_three
+    end  
+    show do
+      field :photo, :carrierwave do
+          pretty_value do
+            bindings[:view].tag(:img, { :src => bindings[:object].photo.medium })
+          end
+        end 
+      field :name
+      field :company_name
+      field :rg
+      field :cpf
+      field :phone
+      field :email
+      field :status
+      field :birthday
+      field :notes
+      field :addresses
+      field :projects
+      field :document_one do
+        label "Contrato"
+      end  
+      field :document_two
+      field :document_three
+    end  
     list do
       field :name
       field :phone
@@ -37,6 +94,7 @@ RailsAdmin.config do |config|
 
   config.model Member do
       create do
+        field :photo
         field :name
         field :rg
         field :cpf
@@ -46,8 +104,11 @@ RailsAdmin.config do |config|
         field :scrum
         field :position
         field :projects 
+        field :document_one
+        field :document_two
       end  
       edit do
+        field :photo
         field :name
         field :rg
         field :cpf
@@ -57,6 +118,8 @@ RailsAdmin.config do |config|
         field :scrum
         field :position
         field :projects 
+        field :document_one
+        field :document_two
       end  
       list do
         field :name
@@ -65,6 +128,24 @@ RailsAdmin.config do |config|
         field :department
         field :position
       end 
+      show do
+        field :photo, :carrierwave do
+          pretty_value do
+            bindings[:view].tag(:img, { :src => bindings[:object].photo.medium })
+          end
+        end   
+        field :name
+        field :rg
+        field :cpf
+        field :phone
+        field :email
+        field :department
+        field :scrum
+        field :position
+        field :projects 
+        field :document_one
+        field :document_two
+      end  
   end  
 
   config.model Project do
