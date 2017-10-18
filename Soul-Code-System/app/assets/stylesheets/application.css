@@ -13,8 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+ 	background-color: #313131;
+ }
 .imagem_login{
-	margin-top: 60px;
+	margin: 60px auto;
+	display: table;
 	width: 240px;
 }
 /* Login */
@@ -23,4 +28,19 @@
 }
 .h4_login{
 	text-align: center;
+	color: #fff;
+}
+.imagem_front{
+	width: 100px;
+	margin: -100px auto;
+	margin-left: 60%;
+	display: table;
+}
+.label_login{
+	color: #fff;
+}
+.botao_login{
+	margin: 0 auto;
+	margin-left: 20%;
+	display: table;
 }

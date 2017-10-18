@@ -25,6 +25,15 @@ pt-BR:
         one: Usuário
         other: Usuários        
     attributes:
+      address: 
+        country: "País"
+        city: "Cidade"
+        state: "Estado"
+        neighborhood: "Bairro"
+        street: "Rua"
+        number: "Número"
+        client: "Cliente"
+        member: "Membro" 
       client:
         photo: "Foto de perfil"
         name: "Nome"
